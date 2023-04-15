@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="chess.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="chessboard">
+            <div class="row">
+                <div class="box white r1c1" onclick="handleClickToMoveRow1()"></div>
+                <div class="box black r1c2" onclick="handleClickToMoveRow1()"></div>
+                <div class="box white r1c3" onclick="handleClickToMoveRow1()"></div>
+                <div class="box black r1c4" onclick="handleClickToMoveRow1()"></div>
+                <div class="box white r1c5" onclick="handleClickToMoveRow1()"></div>
+                <div class="box black r1c6" onclick="handleClickToMoveRow1()"></div>
+                <div class="box white r1c7" onclick="handleClickToMoveRow1()"></div>
+                <div class="box black r1c8" onclick="handleClickToMoveRow1()"></div>
+            </div>
+            <div class="row">
+                <div class="box black r2c1" onclick="handleClickToMoveRow2()"></div>
+                <div class="box white r2c2" onclick="handleClickToMoveRow2()"></div>
+                <div class="box black r2c3" onclick="handleClickToMoveRow2()"></div>
+                <div class="box white r2c4" onclick="handleClickToMoveRow2()"></div>
+                <div class="box black r2c5" onclick="handleClickToMoveRow2()"></div>
+                <div class="box white r2c6" onclick="handleClickToMoveRow2()"></div>
+                <div class="box black r2c7" onclick="handleClickToMoveRow2()"></div>
+                <div class="box white r2c8" onclick="handleClickToMoveRow2()"></div>
+            </div>
+            <div class="row">
+                <div class="box white r3c1" onclick="handleClickToMoveRow3()"></div>
+                <div class="box black r3c2" onclick="handleClickToMoveRow3()"></div>
+                <div class="box white r3c3" onclick="handleClickToMoveRow3()"></div>
+                <div class="box black r3c4" onclick="handleClickToMoveRow3()"></div>
+                <div class="box white r3c5" onclick="handleClickToMoveRow3()"></div>
+                <div class="box black r3c6" onclick="handleClickToMoveRow3()"></div>
+                <div class="box white r3c7" onclick="handleClickToMoveRow3()"></div>
+                <div class="box black r3c8" onclick="handleClickToMoveRow3()"></div>
+            </div>
+            <div class="row">
+                <div class="box black r4c1" onclick="handleClickToMoveRow4()"></div>
+                <div class="box white r4c2" onclick="handleClickToMoveRow4()"></div>
+                <div class="box black r4c3" onclick="handleClickToMoveRow4()"></div>
+                <div class="box white r4c4" onclick="handleClickToMoveRow4()"></div>
+                <div class="box black r4c5" onclick="handleClickToMoveRow4()"></div>
+                <div class="box white r4c6" onclick="handleClickToMoveRow4()"></div>
+                <div class="box black r4c7" onclick="handleClickToMoveRow4()"></div>
+                <div class="box white r4c8" onclick="handleClickToMoveRow4()"></div>
+            </div>
+            <div class="row">
+                <div class="box white r5c1" onclick="handleClickToMoveRow5()"></div>
+                <div class="box black r5c2" onclick="handleClickToMoveRow5()"></div>
+                <div class="box white r5c3" onclick="handleClickToMoveRow5()"></div>
+                <div class="box black r5c4" onclick="handleClickToMoveRow5()"></div>
+                <div class="box white r5c5" onclick="handleClickToMoveRow5()"></div>
+                <div class="box black r5c6" onclick="handleClickToMoveRow5()"></div>
+                <div class="box white r5c7" onclick="handleClickToMoveRow5()"></div>
+                <div class="box black r5c8" onclick="handleClickToMoveRow5()"></div>
+            </div>
+            <div class="row">
+                <div class="box black r6c1" onclick="handleClickToMoveRow6()"></div>
+                <div class="box white r6c2" onclick="handleClickToMoveRow6()"></div>
+                <div class="box black r6c3" onclick="handleClickToMoveRow6()"></div>
+                <div class="box white r6c4" onclick="handleClickToMoveRow6()"></div>
+                <div class="box black r6c5" onclick="handleClickToMoveRow6()"></div>
+                <div class="box white r6c6" onclick="handleClickToMoveRow6()"></div>
+                <div class="box black r6c7" onclick="handleClickToMoveRow6()"></div>
+                <div class="box white r6c8" onclick="handleClickToMoveRow6()"></div>
+            </div>
+            <div class="row">
+                <div class="box white r7c1" onclick="handleClickToMoveRow7()"></div>
+                <div class="box black r7c2" onclick="handleClickToMoveRow7()"></div>
+                <div class="box white r7c3" onclick="handleClickToMoveRow7()"></div>
+                <div class="box black r7c4" onclick="handleClickToMoveRow7()"></div>
+                <div class="box white r7c5" onclick="handleClickToMoveRow7()"></div>
+                <div class="box black r7c6" onclick="handleClickToMoveRow7()"></div>
+                <div class="box white r7c7" onclick="handleClickToMoveRow7()"></div>
+                <div class="box black r7c8" onclick="handleClickToMoveRow7()"></div>
+            </div>
+            <div class="row">
+                <div class="box black r8c1" onclick="handleClickToMoveRow8()"></div>
+                <div class="box white r8c2" onclick="handleClickToMoveRow8()"></div>
+                <div class="box black r8c3" onclick="handleClickToMoveRow8()"></div>
+                <div class="box white r8c4" onclick="handleClickToMoveRow8()"></div>
+                <div class="box black r8c5" onclick="handleClickToMoveRow8()"></div>
+                <div class="box white r8c6" onclick="handleClickToMoveRow8()"></div>
+                <div class="box black r8c7" onclick="handleClickToMoveRow8()"></div>
+                <div class="box white r8c8" onclick="handleClickToMoveRow8()"></div>
+            </div>
+            <div class="BlackSoldier" id="container-black-rook1" onclick="handleClickBlackRook()">
+                <i class="fa-solid fa-chess-rook"></i>
+            </div>
+            <div class="BlackSoldier" id="container-black-knight1" onclick="handleClickBlackKnight()">
+                <i class="fa-solid fa-chess-knight"></i>
+            </div>
+            <div class="BlackSoldier" id="container-black-bishop1" onclick="handleClickBlackBishop()">
+                <i class="fa-solid fa-chess-bishop"></i>
+            </div>
+            <div class="BlackSoldier" id="container-black-queen" onclick="handleClickBlackQueen()">
+                <i class="fa-solid fa-chess-queen"></i>
+            </div>
+            <div class="BlackSoldier" id="container-black-king" onclick="handleClickBlackKing()">
+                <i class="fa-solid fa-chess-king"></i>
+            </div>
+            <div class="BlackSoldier" id="container-black-bishop2" onclick="handleClickBlackBishop()">
+                <i class="fa-solid fa-chess-bishop"></i>
+            </div>
+            <div class="BlackSoldier" id="container-black-knight2" onclick="handleClickBlackKnight()">
+                <i class="fa-solid fa-chess-knight"></i>
+            </div>
+            <div class="BlackSoldier" id="container-black-rook2" onclick="handleClickBlackRook()">
+                <i class="fa-solid fa-chess-rook"></i>
+            </div>
+            <div class="BlackSoldier" id="container-black-pawn1" onclick="handleClickBlackPawn()">
+                <i class="fa-solid fa-chess-pawn"></i>
+            </div>
+            <div class="BlackSoldier" id="container-black-pawn2" onclick="handleClickBlackPawn()">
+                <i class="fa-solid fa-chess-pawn"></i>
+            </div>
+            <div class="BlackSoldier" id="container-black-pawn3" onclick="handleClickBlackPawn()">
+                <i class="fa-solid fa-chess-pawn"></i>
+            </div>
+            <div class="BlackSoldier" id="container-black-pawn4" onclick="handleClickBlackPawn()">
+                <i class="fa-solid fa-chess-pawn"></i>
+            </div>
+            <div class="BlackSoldier" id="container-black-pawn5" onclick="handleClickBlackPawn()">
+                <i class="fa-solid fa-chess-pawn"></i>
+            </div>
+            <div class="BlackSoldier" id="container-black-pawn6" onclick="handleClickBlackPawn()">
+                <i class="fa-solid fa-chess-pawn"></i>
+            </div>
+            <div class="BlackSoldier" id="container-black-pawn7" onclick="handleClickBlackPawn()">
+                <i class="fa-solid fa-chess-pawn"></i>
+            </div>
+            <div class="BlackSoldier" id="container-black-pawn8" onclick="handleClickBlackPawn()">
+                <i class="fa-solid fa-chess-pawn"></i>
+            </div>
+            <div class="WhiteSoldier" id="container-white-pawn1" onclick="handleClickWhitePawn()">
+                <i class="fa-regular fa-chess-pawn"></i>
+            </div>
+            <div class="WhiteSoldier" id="container-white-pawn2" onclick="handleClickWhitePawn()">
+                <i class="fa-regular fa-chess-pawn"></i>
+            </div>
+            <div class="WhiteSoldier" id="container-white-pawn3" onclick="handleClickWhitePawn()">
+                <i class="fa-regular fa-chess-pawn"></i>
+            </div>
+            <div class="WhiteSoldier" id="container-white-pawn4" onclick="handleClickWhitePawn()">
+                <i class="fa-regular fa-chess-pawn"></i>
+            </div>
+            <div class="WhiteSoldier" id="container-white-pawn5" onclick="handleClickWhitePawn()">
+                <i class="fa-regular fa-chess-pawn"></i>
+            </div>
+            <div class="WhiteSoldier" id="container-white-pawn6" onclick="handleClickWhitePawn()">
+                <i class="fa-regular fa-chess-pawn"></i>
+            </div>
+            <div class="WhiteSoldier" id="container-white-pawn7" onclick="handleClickWhitePawn()">
+                <i class="fa-regular fa-chess-pawn"></i>
+            </div>
+            <div class="WhiteSoldier" id="container-white-pawn8" onclick="handleClickWhitePawn()">
+                <i class="fa-regular fa-chess-pawn"></i>
+            </div>
+            <div class="WhiteSoldier" id="container-white-rook1" onclick="handleClickWhiteRook()">
+                <i class="fa-regular fa-chess-rook"></i>
+            </div>
+            <div class="WhiteSoldier" id="container-white-knight1" onclick="handleClickWhiteKnight()">
+                <i class="fa-regular fa-chess-knight"></i>
+            </div>
+            <div class="WhiteSoldier" id="container-white-bishop1" onclick="handleClickWhiteBishop()">
+                <i class="fa-regular fa-chess-bishop"></i>
+            </div>
+            <div class="WhiteSoldier" id="container-white-queen" onclick="handleClickWhiteQueen()">
+                <i class="fa-regular fa-chess-queen"></i>
+            </div>
+            <div class="WhiteSoldier" id="container-white-king" onclick="handleClickWhiteKing()">
+                <i class="fa-regular fa-chess-king"></i>
+            </div>
+            <div class="WhiteSoldier" id="container-white-bishop2" onclick="handleClickWhiteBishop()">
+                <i class="fa-regular fa-chess-bishop"></i>
+            </div>
+            <div class="WhiteSoldier" id="container-white-knight2" onclick="handleClickWhiteKnight()">
+                <i class="fa-regular fa-chess-knight"></i>
+            </div>
+            <div class="WhiteSoldier" id="container-white-rook2" onclick="handleClickWhiteRook()">
+                <i class="fa-regular fa-chess-rook"></i>
+            </div>
+        </div>
+    </div>
+    <script src="chess.js"></script>
+    <script src="whiterook.js"></script>
+    <script src="whiteknight.js"></script>
+    <script src="whitebishop.js"></script>
+    <script src="whitequeen.js"></script>
+    <script src="whiteking.js"></script>
+    <script src="blackpawn.js"></script>
+    <script src="blackrook.js"></script>
+    <script src="blackknight.js"></script>
+    <script src="blackbishop.js"></script>
+    <script src="blackqueen.js"></script>
+    <script src="blackking.js"></script>
+</body>
+</html>

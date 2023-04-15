@@ -1,0 +1,910 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.7);
+}
+.chessboard{
+    width: 50%;
+    height: 90%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.row{
+    width: 100%;
+    height: 12.5%;
+    display: flex;
+}
+.black{
+    width: 12.5%;
+    height: 100%;
+    background-color: #995b1e;
+    margin: 0;
+}
+.white{
+    width: 12.5%;
+    height: 100%;
+    background-color: #e8d2a0;
+    margin: 0;
+}
+#container-black-rook1{
+    position: absolute;
+    bottom: 87.5%;
+    left: 0%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#container-white-rook1{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#container-white-bishop2 i,
+#container-white-knight2 i,
+#container-white-rook2 i,
+#container-white-king i,
+#container-white-bishop1 i,
+#container-white-knight1 i,
+#container-white-queen i,
+#container-white-rook1 i,
+#container-white-pawn1 i,
+#container-white-pawn2 i,
+#container-white-pawn3 i,
+#container-white-pawn4 i,
+#container-white-pawn5 i,
+#container-white-pawn6 i,
+#container-white-pawn7 i,
+#container-white-pawn8 i,
+#container-black-pawn1 i,
+#container-black-pawn2 i,
+#container-black-pawn3 i,
+#container-black-pawn4 i,
+#container-black-pawn5 i,
+#container-black-pawn6 i,
+#container-black-pawn7 i,
+#container-black-pawn8 i,
+#container-black-bishop2 i,
+#container-black-knight2 i,
+#container-black-rook2 i,
+#container-black-king i,
+#container-black-bishop1 i,
+#container-black-knight1 i,
+#container-black-queen i,
+#container-black-rook1 i{
+    display: inline-block;
+    font-size: 6rem;
+    user-select: none;
+    pointer-events:none;
+    user-select: none;
+}
+#container-black-knight1{
+    position: absolute;
+    bottom: 87.5%;
+    left: 12.5%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-white-knight1{
+    position: absolute;
+    bottom: 0%;
+    left: 12.5%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-black-bishop1{
+    position: absolute;
+    bottom: 87.5%;
+    left: 25%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-white-bishop1{
+    position: absolute;
+    bottom: 0%;
+    left: 25%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-black-queen{
+    position: absolute;
+    bottom: 87.5%;
+    left: 37.5%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-black-king{
+    position: absolute;
+    bottom: 87.5%;
+    left: 50%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-black-bishop2{
+    position: absolute;
+    bottom: 87.5%;
+    left: 62.5%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-black-knight2{
+    position: absolute;
+    bottom: 87.5%;
+    left: 75%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-black-rook2{
+    position: absolute;
+    bottom: 87.5%;
+    left: 87.5%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-white-queen{
+    position: absolute;
+    bottom: 0%;
+    left: 37.5%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-white-king{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-white-bishop2{
+    position: absolute;
+    bottom: 0%;
+    left: 62.5%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-white-knight2{
+    position: absolute;
+    bottom: 0%;
+    left: 75%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-white-rook2{
+    position: absolute;
+    bottom: 0%;
+    left: 87.5%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-black-pawn1{
+    position: absolute;
+    bottom: 75%;
+    left: 0%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-black-pawn2{
+    position: absolute;
+    bottom: 75%;
+    left: 12.5%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-black-pawn3{
+    position: absolute;
+    bottom: 75%;
+    left: 25%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-black-pawn4{
+    position: absolute;
+    bottom: 75%;
+    left: 37.5%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-black-pawn5{
+    position: absolute;
+    bottom: 75%;
+    left: 50%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-black-pawn6{
+    position: absolute;
+    bottom: 75%;
+    left: 62.5%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-black-pawn7{
+    position: absolute;
+    bottom: 75%;
+    left: 75%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-black-pawn8{
+    position: absolute;
+    bottom: 75%;
+    left: 87.5%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-white-pawn1{
+    position: absolute;
+    bottom: 12.5%;
+    left: 0%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-white-pawn2{
+    position: absolute;
+    bottom: 12.5%;
+    left: 12.5%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-white-pawn3{
+    position: absolute;
+    bottom: 12.5%;
+    left: 25%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-white-pawn4{
+    position: absolute;
+    bottom: 12.5%;
+    left: 37.5%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-white-pawn5{
+    position: absolute;
+    bottom: 12.5%;
+    left: 50%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-white-pawn6{
+    position: absolute;
+    bottom: 12.5%;
+    left: 62.5%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-white-pawn7{
+    position: absolute;
+    bottom: 12.5%;
+    left: 75%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+#container-white-pawn8{
+    position: absolute;
+    bottom: 12.5%;
+    left: 87.5%;
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    cursor: pointer;
+}
+.r1c1{
+    position: absolute;
+    bottom: 87.5%;
+    left: 0%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r1c2{
+    position: absolute;
+    bottom: 87.5%;
+    left: 12.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r1c3{
+    position: absolute;
+    bottom: 87.5%;
+    left: 25%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r1c4{
+    position: absolute;
+    bottom: 87.5%;
+    left: 37.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r1c5{
+    position: absolute;
+    bottom: 87.5%;
+    left: 50%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r1c6{
+    position: absolute;
+    bottom: 87.5%;
+    left: 62.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r1c7{
+    position: absolute;
+    bottom: 87.5%;
+    left: 75%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r1c8{
+    position: absolute;
+    bottom: 87.5%;
+    left: 87.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r2c1{
+    position: absolute;
+    bottom: 75%;
+    left: 0%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r2c2{
+    position: absolute;
+    bottom: 75%;
+    left: 12.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r2c3{
+    position: absolute;
+    bottom: 75%;
+    left: 25%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r2c4{
+    position: absolute;
+    bottom: 75%;
+    left: 37.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r2c5{
+    position: absolute;
+    bottom: 75%;
+    left: 50%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r2c6{
+    position: absolute;
+    bottom: 75%;
+    left: 62.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r2c7{
+    position: absolute;
+    bottom: 75%;
+    left: 75%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r2c8{
+    position: absolute;
+    bottom: 75%;
+    left: 87.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r7c1{
+    position: absolute;
+    bottom: 12.5%;
+    left: 0%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r7c2{
+    position: absolute;
+    bottom: 12.5%;
+    left: 12.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r7c3{
+    position: absolute;
+    bottom: 12.5%;
+    left: 25%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r7c4{
+    position: absolute;
+    bottom: 12.5%;
+    left: 37.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r7c5{
+    position: absolute;
+    bottom: 12.5%;
+    left: 50%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r7c6{
+    position: absolute;
+    bottom: 12.5%;
+    left: 62.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r7c7{
+    position: absolute;
+    bottom: 12.5%;
+    left: 75%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r7c8{
+    position: absolute;
+    bottom: 12.5%;
+    left: 87.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r8c1{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r8c2{
+    position: absolute;
+    bottom: 0%;
+    left: 12.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r8c3{
+    position: absolute;
+    bottom: 0%;
+    left: 25%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r8c4{
+    position: absolute;
+    bottom: 0%;
+    left: 37.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r8c5{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r8c6{
+    position: absolute;
+    bottom: 0%;
+    left: 62.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r8c7{
+    position: absolute;
+    bottom: 0%;
+    left: 75%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r8c8{
+    position: absolute;
+    bottom: 0%;
+    left: 87.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r6c1{
+    position: absolute;
+    bottom: 25%;
+    left: 0%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r6c2{
+    position: absolute;
+    bottom: 25%;
+    left: 12.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r6c3{
+    position: absolute;
+    bottom: 25%;
+    left: 25%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r6c4{
+    position: absolute;
+    bottom: 25%;
+    left: 37.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r6c5{
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r6c6{
+    position: absolute;
+    bottom: 25%;
+    left: 62.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r6c7{
+    position: absolute;
+    bottom: 25%;
+    left: 75%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r6c8{
+    position: absolute;
+    bottom: 25%;
+    left: 87.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r5c1{
+    position: absolute;
+    bottom: 37.5%;
+    left: 0%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r5c2{
+    position: absolute;
+    bottom: 37.5%;
+    left: 12.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r5c3{
+    position: absolute;
+    bottom: 37.5%;
+    left: 25%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r5c4{
+    position: absolute;
+    bottom: 37.5%;
+    left: 37.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r5c5{
+    position: absolute;
+    bottom: 37.5%;
+    left: 50%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r5c6{
+    position: absolute;
+    bottom: 37.5%;
+    left: 62.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r5c7{
+    position: absolute;
+    bottom: 37.5%;
+    left: 75%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r5c8{
+    position: absolute;
+    bottom: 37.5%;
+    left: 87.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r4c1{
+    position: absolute;
+    bottom: 50%;
+    left: 0%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r4c2{
+    position: absolute;
+    bottom: 50%;
+    left: 12.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r4c3{
+    position: absolute;
+    bottom: 50%;
+    left: 25%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r4c4{
+    position: absolute;
+    bottom: 50%;
+    left: 37.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r4c5{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r4c6{
+    position: absolute;
+    bottom: 50%;
+    left: 62.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r4c7{
+    position: absolute;
+    bottom: 50%;
+    left: 75%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r4c8{
+    position: absolute;
+    bottom: 50%;
+    left: 87.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r3c1{
+    position: absolute;
+    bottom: 62.5%;
+    left: 0%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r3c2{
+    position: absolute;
+    bottom: 62.5%;
+    left: 12.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r3c3{
+    position: absolute;
+    bottom: 62.5%;
+    left: 25%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r3c4{
+    position: absolute;
+    bottom: 62.5%;
+    left: 37.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r3c5{
+    position: absolute;
+    bottom: 62.5%;
+    left: 50%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r3c6{
+    position: absolute;
+    bottom: 62.5%;
+    left: 62.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r3c7{
+    position: absolute;
+    bottom: 62.5%;
+    left: 75%;
+    width: 12.5%;
+    height: 12.5%;
+}
+.r3c8{
+    position: absolute;
+    bottom: 62.5%;
+    left: 87.5%;
+    width: 12.5%;
+    height: 12.5%;
+}
